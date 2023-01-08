@@ -1,6 +1,9 @@
 **Lava-Network-Node-Guide**
 
 
+![alt text](https://i.hizliresim.com/e5qbrvl.png)
+
+
 **Minimum Sistem Gereksinimleri**
 
 - **4 CPU**
