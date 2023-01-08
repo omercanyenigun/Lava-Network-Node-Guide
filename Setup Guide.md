@@ -61,7 +61,7 @@ lavad version --long | head
 #version: 0.4.0-rc2-e2c69db çıktı vermeli
 
 
-#monikeradınız yerini kendinize göre isim verin
+#monikeradınız yerine kendinize göre isim verin
 
 ```
 lavad init "MonikerAdınız" --chain-id lava-testnet-1
@@ -75,7 +75,7 @@ lavad keys add <Cuzdanismi>
 ```
 
 #cüzdan bilgilerini kaydetmeyi unutmayın
-#Lava Network Discord faucet kanalından token isteyin örnek: $request <cuzdanadresi>
+#Lava Network Discord faucet kanalından token isteyin $request ile
 
 
 ``` 
@@ -143,6 +143,10 @@ lavad tx staking create-validator \
   --details="" \
   --website="" -y
 ```
+
+**Explorer**
+
+- **https://lava.explorers.guru/validators**
 
 
 
