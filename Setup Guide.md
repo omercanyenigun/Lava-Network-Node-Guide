@@ -104,6 +104,7 @@ sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.lava/con
 
 ```
 wget -O addrbook.json https://snapshots.polkachu.com/testnet-addrbook/lava/addrbook.json --inet4-only
+rm ~/.lava/config/addrbook.json
 mv addrbook.json ~/.lava/config
 ```
 
@@ -114,9 +115,10 @@ lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
 
 **Snapshost**
 
-```
-curl -o - -L https://snapshots.polkachu.com/testnet-snapshots/lava/lava_18001.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.lava
-```
+Bu linke gidin ve en aşağıda yer alan komutu kopyalayıp terminalinize yapıştırın: 
+- **https://polkachu.com/testnets/lava/snapshots**
+
+(curl -o - -L https://snapshots.polkachu.com/testnet-snapshots/lava/.... ile başlayan komut.)
 
 
 
