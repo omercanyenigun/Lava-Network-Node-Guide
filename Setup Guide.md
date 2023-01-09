@@ -100,6 +100,26 @@ PEERS="4bfb0d4d945985d2cc92ea4ba3578459b80f1dab@190.2.155.67:33656,ac7cefeff026e
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.lava/config/config.toml
 ```
 
+**Addrbook**
+
+```
+wget -O addrbook.json https://snapshots.polkachu.com/testnet-addrbook/lava/addrbook.json --inet4-only
+mv addrbook.json ~/.lava/config
+```
+
+```
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
+```
+
+
+**Snapshost**
+
+```
+curl -o - -L https://snapshots.polkachu.com/testnet-snapshots/lava/lava_18001.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.lava
+```
+
+
+
 **Servis Dosyası**
 
 ```
