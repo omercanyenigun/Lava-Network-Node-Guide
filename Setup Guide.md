@@ -70,9 +70,9 @@ cp genesis_json/genesis.json $lava_config_folder/genesis.json
 - **moniker-isminiz ve cüzdan-isminizi belirlerin**
 
 ```
-LAVA_CHAIN=“lava-testnet-1”
-LAVA_MONIKER=“moniker-isminiz”
-LAVA_WALLET=“cüzdan-isminiz”
+LAVA_CHAIN="lava-testnet-1"
+LAVA_MONIKER="moniker-isminiz"
+LAVA_WALLET="cüzdan-isminiz"
 ```
 
 - **Cosmovisor Kurulum**
