@@ -227,11 +227,16 @@ lavad tx staking create-validator --yes \
 lavad query bank balances <cüzdan-adresiniz>
 ```
 
+![alt text](https://i.hizliresim.com/k70j58a.png)
+
 - **Cüzdan Listesi**
 
 ```
 lavad  keys list
 ```
+
+![alt text](https://i.hizliresim.com/e93p95w.png)
+
 
 - **Validatör Ödüllerini Çekme**
 
