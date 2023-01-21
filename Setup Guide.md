@@ -41,7 +41,7 @@ source ~/.profile
 go version
 ```
 
-#versiyon go1.19.3 olmalı
+![alt text](https://i.hizliresim.com/pj9i0oz.png)
 
 ```
 git clone https://github.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T.git
