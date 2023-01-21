@@ -39,8 +39,9 @@ source ~/.profile
 
 ```
 go version
-#versiyon go1.19.3 olmalı
 ```
+
+#versiyon go1.19.3 olmalı
 
 ```
 git clone https://github.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T.git
@@ -155,8 +156,8 @@ sudo systemctl start cosmovisor
 
 ```
 sudo systemctl status cosmovisor
-# CTRL-C ile çıkış yapabilirsiniz.
 ```
+#CTRL-C ile çıkış yapabilirsiniz.
 
 ```
 current_lavad_binary="$HOME/.lava/cosmovisor/current/bin/lavad"
@@ -166,8 +167,8 @@ current_lavad_binary="$HOME/.lava/cosmovisor/current/bin/lavad"
 
 ```
 $current_lavad_binary keys add $LAVA_WALLET
-#mnemoniclerinizi kaydetmeyi unutmayın!
 ```
+#Mnemoniclerinizi kaydetmeyi unutmayın!
 
 - **Faucetten Token İsteme**
 
@@ -183,8 +184,9 @@ sudo journalctl -u cosmovisor -f
 
 ```
 $current_lavad_binary status | jq
-#Senkronizasyon için latest_block_height değeri son blockta ve catching_up false olmalı
 ```
+
+#Senkronizasyon için latest_block_height değeri son blockta ve catching_up false olmalı
 
 - **Validatör Oluşturma**
 
