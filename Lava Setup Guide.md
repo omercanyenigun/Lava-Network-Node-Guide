@@ -216,7 +216,7 @@ lavad tx staking create-validator --yes \
 #50000ulava olan token adedini cüzdanınızdaki token adedine göre ayarlayın.
 
 
-![alt text](https://i.hizliresim.com/46e18mw.png)
+![alt text](https://i.hizliresim.com/d9w2quz.png)
 
 
 **Diğer Gerekli Kodlar**
@@ -253,7 +253,7 @@ lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000u
 
 - **Lava Cüzdan Mnemoniclerinizi Keplr Wallet'a İmport Ederek Cüzdanınızı Keplr Wallet'ta Görebilirsiniz**
 
-![alt text](https://i.hizliresim.com/c8tg9t5.png)
+![alt text](https://i.hizliresim.com/rxrgzjs.png)
 
 - **Explorer** - **https://lava.explorers.guru/validators**
 
