@@ -41,7 +41,7 @@ source ~/.profile
 go version
 ```
 
-![alt text](https://i.hizliresim.com/pj9i0oz.png)
+![alt text](https://i.hizliresim.com/hs3sbdm.png)
 
 ```
 git clone https://github.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T.git
@@ -120,6 +120,8 @@ $LAVA_MONIKER \
 cp genesis_json/genesis.json $lava_config_folder/genesis.json
 ```
 
+![alt text](https://i.hizliresim.com/tgczsug.png)
+
 - **Symlinks Oluşturma**
 ```
 ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current
@@ -162,7 +164,7 @@ sudo systemctl start cosmovisor
 ```
 sudo systemctl status cosmovisor
 ```
-![alt text](https://i.hizliresim.com/244l24v.png)
+![alt text](https://i.hizliresim.com/550uoy3.png)
 
 #CTRL-C ile çıkış yapabilirsiniz.
 
@@ -171,7 +173,7 @@ sudo systemctl status cosmovisor
 ```
 lavad keys add $LAVA_WALLET
 ```
-![alt text](https://i.hizliresim.com/5mo36qz.png)
+![alt text](https://i.hizliresim.com/fj1spis.png)
 
 #Mnemoniclerinizi kaydetmeyi unutmayın!
 
@@ -192,7 +194,7 @@ sudo journalctl -u cosmovisor -f
 ```
 lavad status | jq
 ```
-![alt text](https://i.hizliresim.com/rkbg500.png)
+![alt text](https://i.hizliresim.com/aflioiq.png)
 
 #Senkronizasyon için latest_block_height değeri son blockta ve catching_up false olmalı
 
