@@ -113,7 +113,7 @@ source ~/.profile
 
 ```
 $lavad_home_folder/cosmovisor/genesis/bin/lavad init \
-my-node \
+$LAVA_MONIKER \
 --chain-id $LAVA_CHAIN \
 --home $lavad_home_folder \
 --overwrite
