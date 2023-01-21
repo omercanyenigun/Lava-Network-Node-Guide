@@ -237,6 +237,12 @@ $current_lavad_binary tx distribution withdraw-rewards <valoper-adresiniz> --fro
 lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
+- **Keplr Wallet'a Lava Testnet Ağı Ekleme**
+
+- **https://docs.lavanet.xyz/wallet/** sitesinde ADD LAVA TO KEPLR butonuna basıp çıkan Pop-up'a Approve Diyerek Ekleyebilirsiniz
+
+![alt text](https://i.hizliresim.com/dbe5a32.png)
+
 - **Explorer**
 
 - **https://lava.explorers.guru/validators**
