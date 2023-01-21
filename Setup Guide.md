@@ -157,6 +157,8 @@ sudo systemctl start cosmovisor
 ```
 sudo systemctl status cosmovisor
 ```
+![alt text](https://i.hizliresim.com/244l24v.png)
+
 #CTRL-C ile çıkış yapabilirsiniz.
 
 ```
@@ -168,6 +170,8 @@ current_lavad_binary="$HOME/.lava/cosmovisor/current/bin/lavad"
 ```
 $current_lavad_binary keys add $LAVA_WALLET
 ```
+![alt text](https://i.hizliresim.com/5mo36qz.png)
+
 #Mnemoniclerinizi kaydetmeyi unutmayın!
 
 - **Faucetten Token İsteme**
