@@ -178,6 +178,10 @@ $current_lavad_binary keys add $LAVA_WALLET
 
 #Lava Discord Faucet kanalından $request <cüzdan-adresiniz> ile token isteyin
 
+- **Lava Discord**
+
+- **https://discord.gg/jxjeamNe**
+
 - **Logları Görüntüleme**
 
 ```
