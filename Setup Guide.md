@@ -12,7 +12,7 @@
 - **Ubuntu 20.04+**
 
 
-**Gerekli Güncellemeler**
+- **Gerekli Güncellemeler**
 
 ```
 sudo apt update
@@ -22,7 +22,7 @@ sudo apt update
 sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
 ```
 
-**Go Kurulum**
+- **Go Kurulum**
 
 ```
 wget https://golang.org/dl/go1.19.3.linux-amd64.tar.gz
@@ -35,7 +35,7 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >>~/.profile
 echo "export PATH=\$PATH:\$(go env GOPATH)/bin" >>~/.profile
 source ~/.profile
 ```
-**Go Versiyon Kontrol**
+- **Go Versiyon Kontrol**
 
 ```
 go version
@@ -45,7 +45,7 @@ go version
 ```
 git clone https://github.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T.git
 ```
-**testnet-1 klasörüne gir**
+- **testnet-1 klasörüne gir**
 
 ```
 cd GHFkqmTzpdNLDd6T/testnet-1
@@ -66,7 +66,7 @@ cp default_lavad_config_files/* $lava_config_folder
 cp genesis_json/genesis.json $lava_config_folder/genesis.json
 ```
 
-**moniker-isminiz ve cüzdan-isminizi belirlerin**
+- **moniker-isminiz ve cüzdan-isminizi belirlerin**
 
 ```
 LAVA_CHAIN=“lava-testnet-1”
@@ -74,7 +74,7 @@ LAVA_MONIKER=“moniker-isminiz”
 LAVA_WALLET=“cüzdan-isminiz”
 ```
 
-**Cosmovisor Kurulum**
+- **Cosmovisor Kurulum**
 
 ```
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
@@ -108,7 +108,7 @@ echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
 source ~/.profile
 ```
 
-**Genesis Dosyası**
+- **Genesis Dosyası**
 
 ```
 $lavad_home_folder/cosmovisor/genesis/bin/lavad init \
@@ -119,7 +119,7 @@ my-node \
 cp genesis_json/genesis.json $lava_config_folder/genesis.json
 ```
 
-**Servis Dosyası**
+- **Servis Dosyası**
 
 ```
 echo "[Unit]
@@ -151,7 +151,7 @@ sudo systemctl restart systemd-journald
 sudo systemctl start cosmovisor
 ```
 
-**Cosmovisor Kontrol**
+- **Cosmovisor Kontrol**
 
 ```
 sudo systemctl status cosmovisor
@@ -162,31 +162,31 @@ sudo systemctl status cosmovisor
 current_lavad_binary="$HOME/.lava/cosmovisor/current/bin/lavad"
 ```
 
-**Cüzdan Oluşturma**
+- **Cüzdan Oluşturma**
 
 ```
 $current_lavad_binary keys add $LAVA_WALLET
 #mnemoniclerinizi kaydetmeyi unutmayın!
 ```
 
-**Faucetten Token İsteme**
+- **Faucetten Token İsteme**
 
 #Lava Discord Faucet kanalından $request <cüzdan-adresiniz> ile token isteyin
 
-**Logları Görüntüleme**
+- **Logları Görüntüleme**
 
 ```
 sudo journalctl -u cosmovisor -f
 ```
 
-**Senkronizasyon Kontrolü**
+- **Senkronizasyon Kontrolü**
 
 ```
 $current_lavad_binary status | jq
 #Senkronizasyon için latest_block_height değeri son blockta ve catching_up false olmalı
 ```
 
-**Validatör Oluşturma**
+- **Validatör Oluşturma**
 
 ```
 $current_lavad_binary tx staking create-validator --yes \
@@ -199,33 +199,33 @@ $current_lavad_binary tx staking create-validator --yes \
  --pubkey "$($current_lavad_binary tendermint show-validator)" \
  --from $LAVA_WALLET \
  --chain-id $LAVA_CHAIN
- 
- #50000ulava olan token adedini cüzdanınızdaki token adedine göre ayarlayın.
 ```
 
+#50000ulava olan token adedini cüzdanınızdaki token adedine göre ayarlayın.
 
-**Diğer Gerekli Kodla**
+
+- **Diğer Gerekli Kodla**
 
 
-**Cüzdan Listesi**
+- **Cüzdan Listesi**
 
 ```
 $current_lavad_binary  keys list
 ```
 
-**Validatör Ödüllerini Çekme**
+- **Validatör Ödüllerini Çekme**
 
 ```
 $current_lavad_binary tx distribution withdraw-rewards <cüzdan-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
-**Başka Cüzdana Token Gönderme**
+- **Başka Cüzdana Token Gönderme**
 
 ```
 lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --gas auto --fees 4000ulava
 ```
 
-**Explorer**
+- **Explorer**
 
 - **https://lava.explorers.guru/validators**
 
