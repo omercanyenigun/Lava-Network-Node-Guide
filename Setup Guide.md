@@ -206,7 +206,7 @@ $current_lavad_binary tx staking create-validator --yes \
 #50000ulava olan token adedini cüzdanınızdaki token adedine göre ayarlayın.
 
 
-**Diğer Gerekli Kodlar**
+*Diğer Gerekli Kodlar*
 
 
 - **Cüzdan Listesi**
