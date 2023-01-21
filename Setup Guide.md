@@ -234,7 +234,7 @@ $current_lavad_binary tx distribution withdraw-rewards <cüzdan-adresiniz> --fro
 - **Başka Cüzdana Token Gönderme**
 
 ```
-lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --gas auto --fees 4000ulava
+lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
 - **Explorer**
