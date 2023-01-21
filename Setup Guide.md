@@ -228,7 +228,7 @@ $current_lavad_binary  keys list
 - **Validatör Ödüllerini Çekme**
 
 ```
-$current_lavad_binary tx distribution withdraw-rewards <cüzdan-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
+$current_lavad_binary tx distribution withdraw-rewards <valoper-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
 - **Başka Cüzdana Token Gönderme**
