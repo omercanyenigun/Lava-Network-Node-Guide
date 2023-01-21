@@ -120,6 +120,11 @@ $LAVA_MONIKER \
 cp genesis_json/genesis.json $lava_config_folder/genesis.json
 ```
 
+- **Symlinks Oluşturma **
+```
+ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current
+sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad
+```
 - **Servis Dosyası**
 
 ```
@@ -161,14 +166,10 @@ sudo systemctl status cosmovisor
 
 #CTRL-C ile çıkış yapabilirsiniz.
 
-```
-current_lavad_binary="$HOME/.lava/cosmovisor/current/bin/lavad"
-```
-
 - **Cüzdan Oluşturma**
 
 ```
-$current_lavad_binary keys add $LAVA_WALLET
+lavad keys add $LAVA_WALLET
 ```
 ![alt text](https://i.hizliresim.com/5mo36qz.png)
 
@@ -189,7 +190,7 @@ sudo journalctl -u cosmovisor -f
 - **Senkronizasyon Kontrolü**
 
 ```
-$current_lavad_binary status | jq
+lavad status | jq
 ```
 ![alt text](https://i.hizliresim.com/rkbg500.png)
 
@@ -198,14 +199,14 @@ $current_lavad_binary status | jq
 - **Validatör Oluşturma**
 
 ```
-$current_lavad_binary tx staking create-validator --yes \
+lavad tx staking create-validator --yes \
  --amount 50000ulava \
  --moniker $LAVA_MONIKER \
  --commission-rate "0.10" \
  --commission-max-rate "0.20" \
  --commission-max-change-rate "0.01" \
  --min-self-delegation "1" \
- --pubkey "$($current_lavad_binary tendermint show-validator)" \
+ --pubkey "$(lavad tendermint show-validator)" \
  --from $LAVA_WALLET \
  --chain-id $LAVA_CHAIN
 ```
@@ -222,13 +223,13 @@ $current_lavad_binary tx staking create-validator --yes \
 - **Cüzdan Listesi**
 
 ```
-$current_lavad_binary  keys list
+lavad  keys list
 ```
 
 - **Validatör Ödüllerini Çekme**
 
 ```
-$current_lavad_binary tx distribution withdraw-rewards <valoper-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
+lavad tx distribution withdraw-rewards <valoper-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
 - **Başka Cüzdana Token Gönderme**
