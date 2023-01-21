@@ -221,6 +221,11 @@ lavad tx staking create-validator --yes \
 
 **Diğer Gerekli Kodlar**
 
+- **Cüzdan Bakiye Kontrol**
+
+```
+lavad query bank balances <cüzdan-adresiniz>
+```
 
 - **Cüzdan Listesi**
 
