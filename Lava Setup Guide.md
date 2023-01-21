@@ -120,7 +120,7 @@ $LAVA_MONIKER \
 cp genesis_json/genesis.json $lava_config_folder/genesis.json
 ```
 
-- **Symlinks Oluşturma **
+- **Symlinks Oluşturma**
 ```
 ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current
 sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad
