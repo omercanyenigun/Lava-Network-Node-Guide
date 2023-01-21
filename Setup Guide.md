@@ -249,6 +249,16 @@ lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000u
 
 - **Explorer** - **https://lava.explorers.guru/validators**
 
+- **https://t.me/testnetrun**
+
+- **https://www.youtube.com/@TestNetRun**
+
+- **https://testnet.run/**
+
+- **https://stake.testnet.run/**
+
+- **https://twitter.com/testnetrun**
+
 
 
 
