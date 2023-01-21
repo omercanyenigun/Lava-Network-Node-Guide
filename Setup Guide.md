@@ -185,6 +185,7 @@ sudo journalctl -u cosmovisor -f
 ```
 $current_lavad_binary status | jq
 ```
+![alt text](https://i.hizliresim.com/rkbg500.png)
 
 #Senkronizasyon için latest_block_height değeri son blockta ve catching_up false olmalı
 
