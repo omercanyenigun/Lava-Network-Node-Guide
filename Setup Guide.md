@@ -247,9 +247,8 @@ lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000u
 
 ![alt text](https://i.hizliresim.com/c8tg9t5.png)
 
-- **Explorer**
+- **Explorer** - **https://lava.explorers.guru/validators**
 
-- **https://lava.explorers.guru/validators**
 
 
 
