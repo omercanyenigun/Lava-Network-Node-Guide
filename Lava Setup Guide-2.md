@@ -33,13 +33,25 @@ Version: 1.19 çıkmalı
 - **Yapılandırma**
 
 ```python
+cd $HOME
+git clone https://github.com/lavanet/lava
+cd lava
+git fetch --all
+git checkout v0.8.1
+make install
+```
+
+- **Güncelleme**
+
+```python
 cd $HOME/lava
 git fetch --all
-git clone https://github.com/lavanet/lava
 git checkout v0.8.1
 make install
 lavad version --long | head
+sudo systemctl restart lavad
 ```
+version: 0.8.1 çıkmalı
 
 
 - **Moniker ve Chain Belirleme**
