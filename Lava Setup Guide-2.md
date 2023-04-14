@@ -17,7 +17,7 @@ sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bs
 
 - **Go Kurulum ve Versiyon Kontrolü**
 
-```
+```python
 ver="1.19" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
 sudo rm -rf /usr/local/go && \
@@ -32,7 +32,7 @@ Version: 1.19 çıkmalı
 
 - **Yapılandırma**
 
-```
+```python
 cd $HOME/lava
 git fetch --all
 git clone https://github.com/lavanet/lava
