@@ -1,5 +1,15 @@
 ![alt text](https://i.hizliresim.com/e5qbrvl.png)
 
+|   | Sistem  Gereksinimleri   |
+| --|:-------:|
+| CPU | 4 |
+| RAM | 8  |
+| Disk | 160GB |
+| Sitem | Ubuntu 20.04+ |
+
+
+
+
 
 **Minimum Sistem Gereksinimleri**
 
