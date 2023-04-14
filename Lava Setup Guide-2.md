@@ -41,17 +41,17 @@ git checkout v0.8.1
 make install
 ```
 
-- **Güncelleme**
+- **Versiyon Kontrolü**
 
 ```python
-cd $HOME/lava
-git fetch --all
-git checkout v0.8.1
-make install
 lavad version --long | head
-sudo systemctl restart lavad
 ```
-version: 0.8.1 çıkmalı
+
+name: lava
+server_name: lavad
+version: 0.8.1
+commit: 910bfdf6fca1ba4030f4587c3f5af3382a8b5238
+çıkmalı
 
 
 - **Moniker ve Chain Belirleme**
