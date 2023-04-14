@@ -8,9 +8,9 @@
 - **160GB DISK**
 - **Ubuntu 20.04+**
 
-- **Gerekli Güncellemeler**
+**Gerekli Güncellemeler**
 
-```js apt update
+```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
