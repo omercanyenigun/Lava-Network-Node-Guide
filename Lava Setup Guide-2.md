@@ -44,7 +44,7 @@ lavad version --long | head
 
 - **Moniker ve Chain Belirleme**
 
-```
+```python
 lavad init Testnet --chain-id lava-testnet-1
 lavad config chain-id lava-testnet-1
 ```
@@ -52,20 +52,20 @@ lavad config chain-id lava-testnet-1
 
 - **Cüzdan Oluşturma veya İmport Etme**
 
-```
+```python
 lavad keys add wallet
 ```
 
 - **Eğer kendi cüzdanınızı import etmek isterseniz**
 
-```
+```python
 lavad keys add wallet --recover
 ```
 
 
 - **Cüzdan Listesi**
 
-```
+```python
 lavad  keys list
 ```
 
@@ -78,19 +78,19 @@ lavad  keys list
 
 - **Bakiye Kontrolü**
 
-```
+```python
 lavad query bank balances cüzdanadresi
 ```
 
 - **Genesis Dosyası** 
 
-```
+```python
 wget -O ~/.lava/config/genesis.json https://raw.githubusercontent.com/omercanyenigun/Lava-Network-Node-Guide/main/genesis.json
 ```
 
 - **Minimum Gas Fiyatı, Peers, Seeds Ayarlama**
 
-```
+```python
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ulava\"/" $HOME/.lava/config/app.toml
 sed -i -e "s/^filter_peers *=.*/filter_peers = \"true\"/" $HOME/.lava/config/config.toml
 external_address=$(wget -qO- eth0.me) 
@@ -110,7 +110,7 @@ sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 50/g' $HOME/.lava/
 
 - **Pruning (budama) isteğe bağlı**
 
-```
+```python
 pruning="custom" && \
 pruning_keep_recent="100" && \
 pruning_keep_every="0" && \
@@ -123,20 +123,20 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" ~
 
 - **Indexer düzenleme (isteğe bağlı)**
 
-```
+```python
 indexer="null" && \
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.lava/config/config.toml
 ```
 
 - **Addrbook Dosyası**
 
-```
+```python
 wget -O $HOME/.lava/config/addrbook.json https://raw.githubusercontent.com/omercanyenigun/Lava-Network-Node-Guide/main/addrbook.json
 ```
 
 - **Servis Dosyası Düzenleme**
 
-```
+```python
 sudo tee /etc/systemd/system/lavad.service > /dev/null <<EOF
 [Unit]
 Description=lava
@@ -157,26 +157,26 @@ EOF
 
 - **Node Başlatma**
 
-```
+```python
 sudo systemctl daemon-reload
 sudo systemctl enable lavad
 ```
 
 - **Log Kontrolü**
 
-```
+```python
 sudo systemctl restart lavad && sudo journalctl -u lavad -f -o cat
 ```
 
 - **Senkronizasyon Kontrolü (çıktı false ise senkronizasyon olmuştur)**
 
-```
+```python
 lavad status 2>&1 | jq .SyncInfo
 ```
 
 - **Validatör Oluşturma**
 
-```
+```python
 lavad tx staking create-validator \
   --amount 1000000ulava \
   --from wallet \
@@ -194,13 +194,13 @@ lavad tx staking create-validator \
 
 - **Validatör Ödüllerini Çekme**
 
-```
+```python
 lavad tx distribution withdraw-rewards <valoper-adresiniz> --from $LAVA_WALLET --commission --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
 - **Başka Cüzdana Token Gönderme**
 
-```
+```python
 lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
