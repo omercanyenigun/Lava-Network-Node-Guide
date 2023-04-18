@@ -223,6 +223,17 @@ lavad tx distribution withdraw-rewards <valoper-adresiniz> --from $LAVA_WALLET -
 lavad tx bank send <cüzdan-adresiniz> <gönderilecek-cüzdan-adresi> 500000000ulava --chain-id $LAVA_CHAIN --gas auto --fees 4000ulava
 ```
 
+- **Sunucudan Lava'yı Silmek İçin**
+
+```python
+sudo systemctl stop lavad
+sudo systemctl disable lavad
+sudo rm -rf $HOME/.lava
+sudo rm -rf $HOME/lavad
+sudo rm -rf /etc/systemd/system/lavad.service
+sudo rm -rf /usr/local/bin/lavad
+sudo systemctl daemon-reload
+```
 
 
 - **Keplr Wallet'a Lava Testnet Ağı Ekleme**
