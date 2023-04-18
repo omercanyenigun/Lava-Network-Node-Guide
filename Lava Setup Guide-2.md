@@ -33,14 +33,16 @@ Version: 1.19 çıkmalı
 - **Yapılandırma**
 
 ```python
-cd $HOME 
-git clone https://github.com/lavanet/lava 
-cd lava 
-git fetch --all 
-git checkout v0.8.1
+git clone https://github.com/lavanet/lava
+cd lava
+git checkout v0.9.8 
 make install
-sudo mv $HOME/lava/build/lavad /usr/local/bin/lavad
 ```
+
+git clone https://github.com/lavanet/lava
+cd lava
+git checkout v0.9.8 
+make install
 
 - **Versiyon Kontrol**
 
@@ -63,6 +65,7 @@ lavad config chain-id lava-testnet-1
 ```python
 wget -O ~/.lava/config/genesis.json https://raw.githubusercontent.com/omercanyenigun/Lava-Network-Node-Guide/main/genesis.json
 ```
+
 
 - **Peers Ayarlama**
 
@@ -227,7 +230,6 @@ sudo rm -rf /etc/systemd/system/lavad.service
 sudo rm -rf /usr/local/bin/lavad
 sudo systemctl daemon-reload
 ```
-
 
 - **Keplr Wallet'a Lava Testnet Ağı Ekleme**
 
