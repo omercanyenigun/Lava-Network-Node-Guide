@@ -13,7 +13,7 @@
 
 ```python
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git cd ncdu gcc git jq chrony liblz4-tool -y
+sudo apt install curl build-essential pkg-config libssl-dev git wget jq make gcc chrony -y
 ```
 
 - **Go Kurulum ve Versiyon Kontrolü**
