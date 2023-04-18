@@ -45,7 +45,11 @@ make install
 ```python
 lavad version
 ```
-version: 0.8.1 çıkmalı
+version: v0.9.8 çıkmalı
+
+```python
+wget https://lava-binary-upgrades.s3.amazonaws.com/testnet/v0.4.0/lavad && chmod +x lavad && mv lavad $HOME/go/bin/
+```
 
 - **Moniker ve Chain Belirleme**
 
