@@ -33,66 +33,30 @@ Version: 1.19 çıkmalı
 - **Yapılandırma**
 
 ```python
-cd $HOME
-git clone https://github.com/lavanet/lava
-cd lava
-git fetch --all
+cd $HOME 
+git clone https://github.com/lavanet/lava 
+cd lava 
+git fetch --all 
 git checkout v0.8.1
 make install
+sudo mv $HOME/lava/build/lavad /usr/local/bin/lavad
 ```
 
-- **Versiyon Kontrolü**
+- **Versiyon Kontrol**
 
 ```python
-lavad version --long | head
+lavad version
 ```
-
-name: lava
-server_name: lavad
-version: 0.8.1
-commit: 910bfdf6fca1ba4030f4587c3f5af3382a8b5238
-çıkmalı
-
+version: 0.8.1 çıkmalı
 
 - **Moniker ve Chain Belirleme**
 
 ```python
-lavad init Testnet --chain-id lava-testnet-1
+lavad init <moniker-adınız> --chain-id lava-testnet-1
 lavad config chain-id lava-testnet-1
 ```
+<moniker-adınız> yerine validatör isminizi girin
 
-
-- **Cüzdan Oluşturma veya İmport Etme**
-
-```python
-lavad keys add wallet
-```
-
-- **Eğer kendi cüzdanınızı import etmek isterseniz**
-
-```python
-lavad keys add wallet --recover
-```
-
-
-- **Cüzdan Listesi**
-
-```python
-lavad  keys list
-```
-
-
-- **Faucetten Token İsteme**
-
-#Lava Discord Faucet kanalından $request <cüzdan-adresiniz> ile token isteyin
-
-**Lava Discord**  **https://discord.gg/fmAtVh5MJG**
-
-- **Bakiye Kontrolü**
-
-```python
-lavad query bank balances cüzdanadresi
-```
 
 - **Genesis Dosyası** 
 
@@ -166,6 +130,15 @@ WantedBy=multi-user.target
 EOF
 ```
 
+Snapshot (isteğe bağlı)
+
+```python
+sudo systemctl stop lavad
+cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup 
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book 
+curl https://sync.stakerun.com/testnet/lava/lava-testnet-1_2023-04-17.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.lava
+mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json 
+```
 
 - **Node Başlatma**
 
@@ -185,6 +158,40 @@ sudo systemctl restart lavad && sudo journalctl -u lavad -f -o cat
 ```python
 lavad status 2>&1 | jq .SyncInfo
 ```
+
+- **Cüzdan Oluşturma veya İmport Etme**
+
+```python
+lavad keys add wallet
+```
+
+- **Eğer kendi cüzdanınızı import etmek isterseniz**
+
+```python
+lavad keys add wallet --recover
+```
+
+
+- **Cüzdan Listesi**
+
+```python
+lavad  keys list
+```
+
+
+- **Faucetten Token İsteme**
+
+#Lava Discord Faucet kanalından $request <cüzdan-adresiniz> ile token isteyin
+
+**Lava Discord**  **https://discord.gg/fmAtVh5MJG**
+
+- **Bakiye Kontrolü**
+
+```python
+lavad query bank balances cüzdanadresi
+```
+
+
 
 - **Validatör Oluşturma**
 
