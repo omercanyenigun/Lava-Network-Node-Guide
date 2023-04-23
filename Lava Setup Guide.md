@@ -1,7 +1,7 @@
-**Lava-Network-Node-Guide**
+**Lava-Network-Node-Guide (Cosmovisor)**
 
 
-![alt text](https://i.hizliresim.com/e5qbrvl.png)
+![alt text](https://i.hizliresim.com/2gb6pg0.png)
 
 
 **Minimum Sistem Gereksinimleri**
