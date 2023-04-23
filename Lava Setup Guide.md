@@ -1,4 +1,4 @@
-**Lava-Network-Node-Guide (Cosmovisor)**
+## Lava-Network-Node-Guide (Cosmovisor)
 
 
 ![alt text](https://i.hizliresim.com/2gb6pg0.png)
